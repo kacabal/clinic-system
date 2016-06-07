@@ -11,6 +11,7 @@ class DbInterface
 {
 public:
     DbInterface(const char *dbPath);
+    ~DbInterface();
 
 private:
     sqlite3 *_db;

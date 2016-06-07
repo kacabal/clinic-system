@@ -4,14 +4,13 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
     const char *db = getenv("CLINIC_DB");
 
     if (!db)
-        db = "./tmp.db";
+        db = "./default.db";
 
-    cout << "Usin db: " << db << endl;
     DbInterface dbIf(db);
     return 0;
 }

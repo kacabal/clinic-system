@@ -18,3 +18,12 @@ DbInterface::DbInterface(const char *dbPath)
         assert(false);
     }
 }
+
+DbInterface::~DbInterface()
+{
+    int ret = sqlite3_close_v2(_db);
+    if (ret != SQLITE_OK)
+    {
+        cout << "Unable to close db right now; code: " << ret << endl;
+    }
+}
