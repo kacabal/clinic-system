@@ -12,5 +12,6 @@ int main(int argc, char *argv[])
         db = "./default.db";
 
     DbInterface dbIf(db);
+
     return 0;
 }
